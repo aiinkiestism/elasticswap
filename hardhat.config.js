@@ -1,6 +1,8 @@
 require("@nomiclabs/hardhat-waffle");
 require("hardhat-contract-sizer");
 require("hardhat-deploy");
+require("solidity-coverage");
+
 
 // You need to export an object to set up your config
 // Go to https://hardhat.org/config/ to learn more
@@ -21,7 +23,7 @@ module.exports = {
     },
   },
   paths: {
-    deploy: ["deploy/core"],
+    deploy: ["deploy/core", "deploy/test"],
     sources: "./src",
   },
   namedAccounts: {
